@@ -1,13 +1,5 @@
-
-FROM python:3.12-slim
-
+FROM python:3.11-slim
 WORKDIR /app
-
-# Install dependencies
-RUN pip install --no-cache-dir pandas matplotlib openpyxl
-
-# Copy project files
 COPY . .
-
-# Default command
-CMD ["python", "subnet_analyzer.py", "--input", "ip_data.xlsx", "--report", "subnet_report.csv", "--plot", "network_plot.png"]
+RUN pip install --no-cache-dir pandas openpyxl matplotlib
+CMD ["python", "subnet_analyzer.py", "-i", "ip_data.xlsx", "-o", "subnet_report.csv"]
