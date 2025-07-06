@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# Lazy plotting script – run this after subnet_analyzer spit out subnet_report.csv
 import pandas as pd, matplotlib.pyplot as plt
 
 df = pd.read_csv("subnet_report.csv")

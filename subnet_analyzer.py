@@ -1,8 +1,3 @@
-#!/usr/bin/env python3
-"""Quick & simple subnet analyser.
-   Written by a bored CS undergrad while eating instant noodles.
-"""
-
 import pandas as pd
 import ipaddress
 import argparse
